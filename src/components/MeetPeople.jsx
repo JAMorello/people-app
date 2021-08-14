@@ -1,5 +1,15 @@
+import { VStack, Heading } from "@chakra-ui/react";
+import WorkerShortCard from "./WorkerShortCard";
+
 const MeetPeople = ({ peopleData }) => {
-  return <div></div>;
+  return (
+    <VStack>
+      <Heading p={2}>Meet our workers!</Heading>
+      {peopleData.map((worker) => (
+        <WorkerShortCard id={worker.id} worker={worker} />
+      ))}
+    </VStack>
+  );
 };
 
 export default MeetPeople;

@@ -15,10 +15,10 @@ const App = () => {
 
   useEffect(() => {
     async function getData() {
+      const link =
+        "https://my.api.mockaroo.com/hard-working-people.json?key=dc4c52f0";
       try {
-        const data = await fetchData(
-          "https://my.api.mockaroo.com/hard-working-people.json?key=dc4c52f0"
-        );
+        const data = await fetchData(link);
         setPageState({ loading: false, peopleData: data, error: null });
       } catch (e) {
         setPageState({ loading: false, peopleData: [], error: e.message });
