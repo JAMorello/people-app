@@ -35,9 +35,17 @@ const MeetPeople = ({ peopleData }) => {
         ) : (
           <WorkerShortCard worker={peopleData[leftCard]} />
         )}
-        <CarouselButton orientation="left" handleClick={handleGoLeft} />
+        <CarouselButton
+          orientation="left"
+          end={!(leftCard === -1)}
+          handleClick={handleGoLeft}
+        />
         <WorkerNormalCard worker={peopleData[centerCard]} />
-        <CarouselButton orientation="right" handleClick={handleGoRight} />
+        <CarouselButton
+          orientation="right"
+          end={!(rightCard === peopleData.length)}
+          handleClick={handleGoRight}
+        />
         {rightCard === peopleData.length ? (
           <EmptyCard />
         ) : (

@@ -7,13 +7,13 @@ const WorkerShortCard = ({ worker }) => {
       borderWidth="1px"
       borderColor="gray.200"
       borderRadius="lg"
+      bg="white"
       h={"12.5rem"}
-      maxW={"16.875rem"}
-      minW={"11.25rem"}
+      minW={"15rem"}
       w={"full"}
       boxShadow={"2xl"}
     >
-      <Heading size="md" fontWeight={500}>
+      <Heading size="md" fontWeight={500} textAlign="center">
         {worker.personal.first_name} {worker.personal.last_name}
       </Heading>
       <Avatar
@@ -23,7 +23,9 @@ const WorkerShortCard = ({ worker }) => {
         }}
         src={worker.personal.avatar}
       />
-      <Text color="gray.500">{worker.work.job_title}</Text>
+      <Text color="gray.500" textAlign="center">
+        {worker.work.job_title}
+      </Text>
     </VStack>
   );
 };

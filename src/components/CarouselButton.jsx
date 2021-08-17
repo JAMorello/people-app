@@ -1,11 +1,11 @@
 import { IconButton } from "@chakra-ui/react";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 
-const CarouselButton = ({ orientation, handleClick }) => {
+const CarouselButton = ({ orientation, end, handleClick }) => {
   if (orientation === "left") {
     return (
       <IconButton
-        colorScheme="green"
+        colorScheme={!end ? "gray" : "green"}
         isRound={true}
         aria-label="Go left"
         icon={<BsCaretLeftFill />}
@@ -17,7 +17,7 @@ const CarouselButton = ({ orientation, handleClick }) => {
   if (orientation === "right") {
     return (
       <IconButton
-        colorScheme="green"
+        colorScheme={!end ? "gray" : "green"}
         isRound={true}
         aria-label="Go right"
         icon={<BsCaretRightFill />}

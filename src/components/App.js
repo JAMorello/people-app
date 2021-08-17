@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   return (
-    <VStack>
+    <VStack bg="red.50">
       <Heading>Hard Working People</Heading>
       <Divider />
       {loading ? (

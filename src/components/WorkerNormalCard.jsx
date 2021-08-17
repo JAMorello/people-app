@@ -1,5 +1,5 @@
 import {
-  VStack,
+  Flex,
   Heading,
   Text,
   Avatar,
@@ -13,14 +13,18 @@ const WorkerNormalCard = ({ worker }) => {
 
   return (
     <>
-      <VStack
+      <Flex
+        direction="column"
+        justify="space-between"
+        align="center"
         p={4}
         borderWidth="1px"
         borderColor="gray.200"
         borderRadius="lg"
-        h={"18.75rem"}
-        maxW={"16.875rem"}
-        minW={"11.25rem"}
+        bg="white"
+        h={"25rem"}
+        minW={"15rem"}
+        maxW={"15rem"}
         w={"full"}
         boxShadow={"2xl"}
       >
@@ -49,7 +53,7 @@ const WorkerNormalCard = ({ worker }) => {
         >
           Know more!
         </Button>
-      </VStack>
+      </Flex>
       <WorkerFullCard worker={worker} isOpen={isOpen} onClose={onClose} />
     </>
   );
