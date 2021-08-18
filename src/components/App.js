@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { VStack, Flex, Box, Heading, Divider, Spacer } from "@chakra-ui/react";
+import { VStack, Flex, Box, Spacer } from "@chakra-ui/react";
+import Header from "./Header";
 import AlertMessage from "./AlertMessage";
 import LoadingSpinner from "./LoadingSpinner";
 import MeetPeople from "./MeetPeople";
@@ -30,14 +31,15 @@ const App = () => {
 
   return (
     <VStack bg="red.50" h="100vh">
-      <Heading h="10vh">Hard Working People</Heading>
-      <Divider />
+      <Box w="full" bg="#2D2D2D">
+        <Header />
+      </Box>
       <Flex>
         <Box>
-          <Menu h="90vh" w="20vw" />
+          <Menu h="80vh" w="20vw" />
         </Box>
         <Spacer />
-        <Box h="90vh" w="80vw">
+        <Box h="80vh" w="80vw">
           {loading ? (
             <LoadingSpinner />
           ) : error ? (
