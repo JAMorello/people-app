@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { VStack, Heading, Divider } from "@chakra-ui/react";
+import { VStack, Flex, Box, Heading, Divider, Spacer } from "@chakra-ui/react";
 import AlertMessage from "./AlertMessage";
 import LoadingSpinner from "./LoadingSpinner";
 import MeetPeople from "./MeetPeople";
+import Menu from "./Menu";
 import { fetchData } from "../api/fetchData";
 
 const App = () => {
@@ -28,16 +29,24 @@ const App = () => {
   }, []);
 
   return (
-    <VStack bg="red.50">
-      <Heading>Hard Working People</Heading>
+    <VStack bg="red.50" h="100vh">
+      <Heading h="10vh">Hard Working People</Heading>
       <Divider />
-      {loading ? (
-        <LoadingSpinner />
-      ) : error ? (
-        <AlertMessage />
-      ) : (
-        <MeetPeople peopleData={peopleData} />
-      )}
+      <Flex>
+        <Box>
+          <Menu h="90vh" w="20vw" />
+        </Box>
+        <Spacer />
+        <Box h="90vh" w="80vw">
+          {loading ? (
+            <LoadingSpinner />
+          ) : error ? (
+            <AlertMessage />
+          ) : (
+            <MeetPeople peopleData={peopleData} />
+          )}
+        </Box>
+      </Flex>
     </VStack>
   );
 };
