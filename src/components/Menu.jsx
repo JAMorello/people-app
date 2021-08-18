@@ -12,7 +12,7 @@ const Menu = () => {
       borderColor="gray.400"
       borderRadius="lg"
       bg="gray.100"
-      h="85vh"
+      h="80vh"
       p={4}
     >
       <Button

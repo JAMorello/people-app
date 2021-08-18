@@ -82,7 +82,7 @@ const WorkerFullCard = ({ worker, isOpen, onClose }) => {
               </Box>
 
               <Flex justify="space-around">
-                <Flex direction="column" w="40%">
+                <Flex direction="column" minW="40%" maxW="40%">
                   <HStack>
                     <GiShower />
                     <Text>Shower freq.: {flavorData.shower_freq}</Text>
