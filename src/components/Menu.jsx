@@ -11,14 +11,14 @@ const Menu = () => {
       borderWidth="2px"
       borderColor="gray.400"
       borderRadius="lg"
-      bg="gray.100"
+      bg="gray.50"
       h="80vh"
       p={4}
     >
       <Button
         w="full"
         leftIcon={<BsFillPersonLinesFill />}
-        colorScheme={currentPage === "meet" ? "orange" : "teal"}
+        colorScheme={currentPage === "meet" ? "orange" : "blue"}
         isActive={currentPage === "meet"}
         variant="outline"
       >
@@ -28,7 +28,7 @@ const Menu = () => {
       <Button
         w="full"
         leftIcon={<RiTeamFill />}
-        colorScheme={currentPage === "team" ? "orange" : "teal"}
+        colorScheme={currentPage === "team" ? "orange" : "blue"}
         isActive={currentPage === "team"}
         variant="outline"
       >
