@@ -1,10 +1,18 @@
 import { useState } from "react";
-import { VStack, Divider, Button } from "@chakra-ui/react";
+import { VStack, Divider } from "@chakra-ui/react";
+import { useHistory } from "react-router-dom";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { RiTeamFill } from "react-icons/ri";
+import MenuButton from "./MenuButton";
 
 const Menu = () => {
-  const [currentPage, setCurrentPage] = useState("meet");
+  const [currentPage, setCurrentPage] = useState("home");
+  let history = useHistory();
+
+  function handleClick(pageString) {
+    setCurrentPage(pageString);
+    history.push(`/${pageString}`);
+  }
 
   return (
     <VStack
@@ -15,25 +23,21 @@ const Menu = () => {
       h="80vh"
       p={4}
     >
-      <Button
-        w="full"
-        leftIcon={<BsFillPersonLinesFill />}
-        colorScheme={currentPage === "meet" ? "orange" : "blue"}
-        isActive={currentPage === "meet"}
-        variant="outline"
-      >
-        Meet our workers
-      </Button>
+      <MenuButton
+        text="Meet our workers"
+        icon={<BsFillPersonLinesFill />}
+        page="meet-people"
+        currentPage={currentPage}
+        onClick={handleClick}
+      />
       <Divider />
-      <Button
-        w="full"
-        leftIcon={<RiTeamFill />}
-        colorScheme={currentPage === "team" ? "orange" : "blue"}
-        isActive={currentPage === "team"}
-        variant="outline"
-      >
-        Ensemble a team
-      </Button>
+      <MenuButton
+        text="Ensemble a team"
+        icon={<RiTeamFill />}
+        page="ensemble-team"
+        currentPage={currentPage}
+        onClick={handleClick}
+      />
     </VStack>
   );
 };
