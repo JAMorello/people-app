@@ -2,7 +2,7 @@ import { Center, Spinner } from "@chakra-ui/react";
 
 const LoadingSpinner = () => {
   return (
-    <Center w="100%" h="100vh">
+    <Center w="100%" h="100%">
       {/*Fills the whole screen (below Header)*/}
       <Spinner
         thickness="4px"
