@@ -8,6 +8,7 @@ import Home from "./Home";
 import MeetPeople from "./MeetPeople";
 import EnsembleTeam from "./EnsembleTeam";
 import Menu from "./Menu";
+import Page404 from "../pages/Page404";
 import { fetchData } from "../api/fetchData";
 
 const App = () => {
@@ -54,7 +55,12 @@ const App = () => {
             <Route path="/ensemble-team">
               {peopleData && <EnsembleTeam peopleData={peopleData} />}
             </Route>
-            <Route path="/">{!error && !loading && <Home />}</Route>
+            <Route path="/" exact>
+              {!error && !loading && <Home />}
+            </Route>
+            <Route path="*">
+              <Page404 />
+            </Route>
           </Switch>
         </Box>
       </Flex>
