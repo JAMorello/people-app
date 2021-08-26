@@ -4,7 +4,7 @@ import TeamButton from "./TeamButton";
 const WorkerTeamItem = ({ worker, addTeam, removeTeam }) => {
   return (
     <Box
-      w="40vw"
+      w="50vw"
       p={2}
       mb={3}
       borderWidth="3px"
@@ -20,7 +20,7 @@ const WorkerTeamItem = ({ worker, addTeam, removeTeam }) => {
           }}
           src={worker.personal.avatar}
         />
-        <VStack>
+        <VStack w="50%">
           <Heading size="md" fontWeight={500}>
             {worker.personal.first_name} {worker.personal.last_name}
           </Heading>

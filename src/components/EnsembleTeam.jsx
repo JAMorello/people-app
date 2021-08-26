@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { VStack } from "@chakra-ui/react";
+import { VStack, Flex, Spacer } from "@chakra-ui/react";
 import WorkerTeamItem from "./WorkerTeamItem";
+import Team from "./Team";
 
 const EnsembleTeam = ({ peopleData }) => {
   const [team, setTeam] = useState([]);
@@ -20,18 +21,24 @@ const EnsembleTeam = ({ peopleData }) => {
   };
 
   return (
-    <VStack>
-      {peopleData.map((worker) => {
-        return (
-          <WorkerTeamItem
-            key={worker.id}
-            worker={worker}
-            addTeam={addTeam}
-            removeTeam={removeTeam}
-          />
-        );
-      })}
-    </VStack>
+    <>
+      <Flex direction="row-reverse" mt={2}>
+        <Team teamMembers={team} />
+        <Spacer />
+      </Flex>
+      <VStack h="100%" mt={2} css={{ "overflow-y": "scroll" }}>
+        {peopleData.map((worker) => {
+          return (
+            <WorkerTeamItem
+              key={worker.id}
+              worker={worker}
+              addTeam={addTeam}
+              removeTeam={removeTeam}
+            />
+          );
+        })}
+      </VStack>
+    </>
   );
 };
 

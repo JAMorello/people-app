@@ -11,7 +11,8 @@ const TeamButton = ({ workerId, addTeam, removeTeam }) => {
 
   return (
     <Button
-      w="2rem"
+      w="5rem"
+      ml={2}
       colorScheme={active ? "red" : "green"}
       onClick={handleClick}
     >
