@@ -21,11 +21,14 @@ const EnsembleTeam = ({ peopleData }) => {
   };
 
   return (
-    <>
-      <Flex direction="row-reverse" mt={2}>
-        <Team teamMembers={team} />
-        <Spacer />
-      </Flex>
+    <Flex
+      h="80vh"
+      direction="column"
+      justifyContent="center"
+      alignContent="center"
+      alignItems="center"
+    >
+      <Team teamMembers={team} />
       <VStack h="100%" mt={2} css={{ "overflow-y": "scroll" }}>
         {peopleData.map((worker) => {
           return (
@@ -38,7 +41,7 @@ const EnsembleTeam = ({ peopleData }) => {
           );
         })}
       </VStack>
-    </>
+    </Flex>
   );
 };
 

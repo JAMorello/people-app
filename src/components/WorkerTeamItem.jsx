@@ -13,26 +13,38 @@ const WorkerTeamItem = ({ worker, addTeam, removeTeam }) => {
       bg="gray.200"
     >
       <Flex justifyContent="space-between" alignItems="center">
-        <Avatar
-          size="lg"
-          css={{
-            border: `3px solid ${worker.color}`,
-          }}
-          src={worker.personal.avatar}
-        />
-        <VStack w="50%">
+        <VStack w="25%">
           <Heading size="md" fontWeight={500}>
             {worker.personal.first_name} {worker.personal.last_name}
           </Heading>
+          <Avatar
+            size="lg"
+            css={{
+              border: `3px solid ${worker.color}`,
+            }}
+            src={worker.personal.avatar}
+          />
+        </VStack>
+        <VStack w="50%">
+          <Box bg="gray.900" mb={2} p={2} borderRadius="lg">
+            <Heading size="sm" color="white" textAlign="center">
+              {worker.work.job_title}
+            </Heading>
+          </Box>
           <Flex
-            p={2}
+            p={1}
             flexWrap="wrap"
             justifyContent="space-evenly"
             alignItems="center"
           >
             {worker.team.skill.map((skill) => {
               return (
-                <Badge colorScheme="purple" key={skill}>
+                <Badge
+                  m="3px"
+                  colorScheme="purple"
+                  variant="outline"
+                  key={skill}
+                >
                   {skill}
                 </Badge>
               );

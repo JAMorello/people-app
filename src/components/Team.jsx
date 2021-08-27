@@ -35,9 +35,9 @@ const Team = ({ teamMembers }) => {
       p={2}
       mb={3}
       borderWidth="3px"
-      borderColor="orange.300"
+      borderColor="orange.200"
       borderRadius="lg"
-      bg="orange.200"
+      bg="orange.100"
     >
       <Flex justifyContent="space-between" alignItems="center">
         <Heading>TEAM</Heading>
