@@ -1,16 +1,10 @@
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-  Flex,
-} from "@chakra-ui/react";
+import { Alert, AlertIcon, AlertTitle, Flex } from "@chakra-ui/react";
 
-const AlertMessage = () => {
+const Page404 = () => {
   return (
     <Flex justifyContent="center" alignItems="center" h="100%">
       <Alert
-        status="error"
+        status="warning"
         variant="subtle"
         flexDirection="column"
         alignItems="center"
@@ -21,15 +15,11 @@ const AlertMessage = () => {
       >
         <AlertIcon boxSize="40px" mr={0} />
         <AlertTitle mt={4} mb={1} fontSize="lg">
-          Cannot retrieve data!
+          Error 404: page not found!
         </AlertTitle>
-        <AlertDescription maxWidth="sm">
-          There is a problem while trying to retrieve data from the API. Our
-          devs are working on it. Meanwhile, go take a cooffe.
-        </AlertDescription>
       </Alert>
     </Flex>
   );
 };
 
-export default AlertMessage;
+export default Page404;

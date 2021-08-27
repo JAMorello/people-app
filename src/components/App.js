@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { VStack, Flex, Box, Spacer } from "@chakra-ui/react";
+import { Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import AlertMessage from "./AlertMessage";
 import LoadingSpinner from "./LoadingSpinner";
+import Home from "./Home";
 import MeetPeople from "./MeetPeople";
+import EnsembleTeam from "./EnsembleTeam";
 import Menu from "./Menu";
+import Page404 from "../pages/Page404";
 import { fetchData } from "../api/fetchData";
 
 const App = () => {
@@ -39,14 +43,25 @@ const App = () => {
           <Menu h="80vh" w="20vw" />
         </Box>
         <Spacer />
+
         <Box h="80vh" w="80vw">
-          {loading ? (
-            <LoadingSpinner />
-          ) : error ? (
-            <AlertMessage />
-          ) : (
-            <MeetPeople peopleData={peopleData} />
-          )}
+          {loading && <LoadingSpinner />}
+          {error && <AlertMessage />}
+
+          <Switch>
+            <Route path="/meet-people">
+              {peopleData && <MeetPeople peopleData={peopleData} />}
+            </Route>
+            <Route path="/ensemble-team">
+              {peopleData && <EnsembleTeam peopleData={peopleData} />}
+            </Route>
+            <Route path="/" exact>
+              {!error && !loading && <Home />}
+            </Route>
+            <Route path="*">
+              <Page404 />
+            </Route>
+          </Switch>
         </Box>
       </Flex>
     </VStack>

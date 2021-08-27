@@ -6,11 +6,11 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-const AlertMessage = () => {
+const Home = () => {
   return (
     <Flex justifyContent="center" alignItems="center" h="100%">
       <Alert
-        status="error"
+        status="info"
         variant="subtle"
         flexDirection="column"
         alignItems="center"
@@ -21,15 +21,15 @@ const AlertMessage = () => {
       >
         <AlertIcon boxSize="40px" mr={0} />
         <AlertTitle mt={4} mb={1} fontSize="lg">
-          Cannot retrieve data!
+          Welcome to our web page!
         </AlertTitle>
         <AlertDescription maxWidth="sm">
-          There is a problem while trying to retrieve data from the API. Our
-          devs are working on it. Meanwhile, go take a cooffe.
+          Here you can inspect our humble and hardworking employees and ensamble
+          teams to tackle your issues. Have fun!
         </AlertDescription>
       </Alert>
     </Flex>
   );
 };
 
-export default AlertMessage;
+export default Home;
