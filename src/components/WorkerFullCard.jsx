@@ -52,7 +52,7 @@ const WorkerFullCard = ({ worker, isOpen, onClose }) => {
               />
 
               <Flex direction="column">
-                <Box bg="black" mb={2} p={2} borderRadius="lg">
+                <Box bg="gray.900" mb={2} p={2} borderRadius="lg">
                   <Heading size="sm" color="white" textAlign="center">
                     {workData.job_title}
                   </Heading>
