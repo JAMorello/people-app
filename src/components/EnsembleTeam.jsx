@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { VStack, Flex, Spacer } from "@chakra-ui/react";
+import { VStack, Flex } from "@chakra-ui/react";
 import WorkerTeamItem from "./WorkerTeamItem";
 import Team from "./Team";
 
