@@ -2,7 +2,7 @@
 
 ![HWP](/readme-assets/hwp-banner.jpg)
 
-This is the repository of the [HWP App]().
+This is the repository of the [HWP App](https://vigorous-torvalds-d3c3b8.netlify.app). [Last relevant update: 27/08/21]
 
 Do you know our fabulous enterprise named "Hard Working People"? Yes? Awesome!
 Do you know what kind of work we do, how we do it and who does it? Everything you are capable of thinking is the right answer! Except, obviously, the fact the all task are done by our incredible crew of superinteligent robots. Who need humans anyway? Humans need not apply. On the contrary, we "dispatch" them quickly.
