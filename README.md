@@ -21,29 +21,30 @@ This project uses the following libraries: [React](https://es.reactjs.org/) to c
 
 This web application uses randomly generated data retrieved from a mock API created from a schema at [Mockaroo](https://www.mockaroo.com/73781c90).
 
-| Field Name | Data Type |
-| 'id' | `Number` |
-| 'color' | `String`, Hex Color |
-| 'personal.avatar' | `String`, URL |
-| 'personal.first_name' | `String` |
-| 'personal.last_name' | `String` |
-| 'personal.gender' | `String` |
-| 'personal.catch_phrase' | `String` |
-| 'work.job_title' | `String` |
-| 'work.software' | `String` |
-| 'work.city' | `String` |
-| 'work.country' | `String` |
-| 'work.email' | `String` |
-| 'work.since_date' | `Date` (between 08/12/2000 and 08/12/2021)|
-|'flavor.shower_freq'| `String` |
-|'flavor.savings_acc'| `String` |
-|'flavor.likes_to_eat'| `String` |
-|'flavor.has_adiction'| `String` |
-|'flavor.has_pet'| `String` |
-|'flavor.humans_killed'| `Number` |
-|'team.effectivity'| `Number`|
-|'team.disturbance'| `Number` |
-|'team.skill'| String[], between 2 and 5 elements|
+| Field Name              | Data Type                                  |
+| ----------------------- | ------------------------------------------ |
+| 'id'                    | `Number`                                   |
+| 'color'                 | `String`, Hex Color                        |
+| 'personal.avatar'       | `String`, URL                              |
+| 'personal.first_name'   | `String`                                   |
+| 'personal.last_name'    | `String`                                   |
+| 'personal.gender'       | `String`                                   |
+| 'personal.catch_phrase' | `String`                                   |
+| 'work.job_title'        | `String`                                   |
+| 'work.software'         | `String`                                   |
+| 'work.city'             | `String`                                   |
+| 'work.country'          | `String`                                   |
+| 'work.email'            | `String`                                   |
+| 'work.since_date'       | `Date` (between 08/12/2000 and 08/12/2021) |
+| 'flavor.shower_freq'    | `String`                                   |
+| 'flavor.savings_acc'    | `String`                                   |
+| 'flavor.likes_to_eat'   | `String`                                   |
+| 'flavor.has_adiction'   | `String`                                   |
+| 'flavor.has_pet'        | `String`                                   |
+| 'flavor.humans_killed'  | `Number`                                   |
+| 'team.effectivity'      | `Number`                                   |
+| 'team.disturbance'      | `Number`                                   |
+| 'team.skill'            | String[], between 2 and 5 elements         |
 
 The following is an example:
 
