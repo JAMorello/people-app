@@ -44,7 +44,7 @@ This web application uses randomly generated data retrieved from a mock API crea
 | 'flavor.humans_killed'  | `Number`                                   |
 | 'team.effectivity'      | `Number`                                   |
 | 'team.disturbance'      | `Number`                                   |
-| 'team.skill'            | String[], between 2 and 5 elements         |
+| 'team.skill'            | `String[]`, between 2 and 5 elements       |
 
 The following is an example:
 
